@@ -1,0 +1,13 @@
+@import '../../assets/styles/vars.scss';
+
+/***
+ * Component styles
+ *
+ */
+
+.App-footer {
+    background: $black;
+    color:      $white;
+    height:     7vmin;
+    padding:    .8rem 0
+}

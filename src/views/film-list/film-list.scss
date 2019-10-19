@@ -1,0 +1,13 @@
+@import '../../assets/styles/vars.scss';
+
+/***
+ * Component styles
+ *
+ */
+
+.App-filmlist {
+    background:   $black;
+    border:       2px solid $white;
+    border-width: 2px 0 2px 0;
+    height:       68vmin;
+}
