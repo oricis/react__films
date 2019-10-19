@@ -1,6 +1,6 @@
 import '../assets/styles/App.scss';
 import React from 'react';
-import TaskList from "./task-list/TaskList";
+import FilmList from "./film-list/FilmList";
 import logo from '../assets/images/logo.svg';
 
 function App() {
@@ -9,10 +9,10 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
 
-        <h3>TODO List</h3>
+        <h3>React Films</h3>
       </header>
 
-      <TaskList></TaskList>
+
     </div>
   );
 }

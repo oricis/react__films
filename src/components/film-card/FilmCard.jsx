@@ -1,9 +1,8 @@
 
-import './task.scss';
-import ColorPicket from '../color-picket/ColorPicket';
+import './film-card.scss';
 import React, { Component } from 'react';
 
-class Task extends Component
+class FilmCard extends Component
 {
 
     constructor(props)
@@ -24,24 +23,22 @@ class Task extends Component
 
 
         return (
-            <div className="content-box task" data-id={this.props.dataId}>
-                <ColorPicket bgColor={this.props.bgColor}></ColorPicket>
-
-                <p className="task-title">
+            <div className="content-box film" data-id={this.props.dataId}>
+                <p className="film-title">
                     {
                         (this.props.completed === true)
                             ? <span className="strikethrough-text opacity50">this.props.text</span>
                             : this.props.text
                     }
                 </p>
-                <div className="task-buttons">
+                <div className="film-buttons">
                     <button className={this.state.cssClassesForCompleteBtn}
                         disabled={this.props.completed}
-                        onClick={() => { this.completeTask(this.props.dataId); }}>
+                        onClick={() => { this.completeFilm(this.props.dataId); }}>
                         Completada
                     </button>
                     <button className="btn btn-primary"
-                        onClick={() => { this.deleteTask(this.props.dataId); }}>
+                        onClick={() => { this.deleteFilm(this.props.dataId); }}>
                         Eliminar
                     </button>
                 </div>
@@ -50,18 +47,18 @@ class Task extends Component
     }
 
 
-    completeTask = (id) =>
+    completeFilm = (id) =>
     {
-        this.props.onCompleteTask(id);
+        this.props.onCompleteFilm(id);
         this.setState({
             cssClassesForCompleteBtn: 'btn btn-dafault'
         });
     }
 
-    deleteTask = (id) =>
+    deleteFilm = (id) =>
     {
-        this.props.onDeleteTask(id);
+        this.props.onDeleteFilm(id);
     }
 }
 
-export default Task;
+export default FilmCard;

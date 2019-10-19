@@ -1,9 +1,9 @@
 import generateID from '../helpers/generateID.js';
 
-class Task 
+class Film
 {
     completed = false;
-    
+
 
     constructor(text, color)
     {
@@ -13,4 +13,4 @@ class Task
     }
 }
 
-export default Task;
+export default Film;

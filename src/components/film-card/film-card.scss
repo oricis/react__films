@@ -4,23 +4,23 @@
  *
  */
 
-.task-buttons .btn {
+.film-buttons .btn {
     border-radius: 5px;
 }
-.task-buttons .btn:first-child {
+.film-buttons .btn:first-child {
     border-radius: 5px 0 0 5px;
     border-right:  0;
 }
-.task-buttons .btn:last-child {
+.film-buttons .btn:last-child {
     border-radius: 0 5px 5px 0;
 }
-.task-list .task {
+.film-list .film {
     display:       inline-block;
     margin-bottom:  .5rem;
     margin-right:   .5rem;
     padding:        .5rem;
     padding-bottom: 0;
 }
-.task-title {
+.film-title {
     margin-bottom: .5rem;
 }
