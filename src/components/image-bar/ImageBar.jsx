@@ -15,11 +15,11 @@ class ImageBar extends Component
         return (
             <div className="images-bar">
                 <div className="masking-box gradient-to-left">
-                    <img src={img1} />
-                    <img src={img2} />
-                    <img src={img3} />
-                    <img src={img4} />
-                    <img src={img5} />
+                    <img src={img1} alt="" />
+                    <img src={img2} alt="" />
+                    <img src={img3} alt="" />
+                    <img src={img4} alt="" />
+                    <img src={img5} alt="" />
                 </div>
             </div>
         );
