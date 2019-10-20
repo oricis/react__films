@@ -13,11 +13,10 @@ class App extends Component
         super();
 
         this.categories = ['upcoming', 'top_rated', 'popular'];
-        this.data = [];
-        this.pageSubtitle = '';
 
         this.state = {
             category: '',
+            currentFilmId: null,
             fetched:  0,
             films:    [],
             error:    '',
@@ -50,7 +49,13 @@ class App extends Component
                         onSelectedMenuItem={(category) => { this.getFilms(category); }}
                         ></HorizontalMenu>
                 </nav>
-                <FilmList films={this.state.films}></FilmList>
+                {
+                    (this.state.currentFilmId)
+                        ? 'Ver pelicula: ' + this.state.currentFilmId
+                        : <FilmList
+                            films={this.state.films}
+                            goToFilm={(id) => { this.getFilm(id); }}></FilmList>
+                }
                 <Footer></Footer>
             </div>
         );
@@ -62,17 +67,41 @@ class App extends Component
      *
      */
 
+    async getFilm(filmId)
+    {
+        console.log('App / getFilm() - id: ' + filmId); // HACK:
+
+        if (this.state.currentFilmId !== filmId) {
+
+            try {
+                const data = await AxiosApi.getMovieById(filmId);
+                this.setState({
+                    currentFilmId: filmId,
+                    fetched: 1,
+                    films: data.results,
+                    error: '',
+                });
+            } catch {
+                this.setState({
+                    currentFilmId: filmId,
+                    fetched: 1,
+                    error: 'Fail fetching the movie with ID: ' + filmId,
+                });
+            }
+        } /**/
+    }
+
     async getFilms(category)
     {
         category = (category) ? category : this.categories[0];
 
-        // if (category !== this.state.category && !this.state.loading) {
         if (this.state.fetched <= 2) {
 
             try {
                 const data = await AxiosApi.getMoviesByCategory(category);
                 this.setState({
                     category: category,
+                    currentFilmId: null,
                     fetched: 2,
                     films: data.results,
                     error: '',
@@ -80,11 +109,12 @@ class App extends Component
             } catch {
                 this.setState({
                     category: category,
+                    currentFilmId: null,
                     fetched: 2,
                     error: 'Fail fetching movies',
                 });
             }
-        } /**/
+        }
     }
 }
 

@@ -9,7 +9,8 @@ class FilmImageCard extends Component
     {
 
         return (
-            <Card id={this.props.film.id} className="custom-card">
+            <Card className="custom-card"
+                onClick={() => { this.openFilm(this.props.film.id); }}>
                 <Image src={path + this.props.film.poster_path} wrapped ui={false} />
                 <Card.Content>
                     <Card.Header>{this.props.film.title}</Card.Header>
@@ -27,6 +28,11 @@ class FilmImageCard extends Component
                     }
                 </Card >
         );
+    }
+
+
+    openFilm = (id) => {
+        this.props.onClick(id);
     }
 }
 

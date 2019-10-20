@@ -35,9 +35,9 @@ class FilmList extends Component
      *
      */
 
-    openFilm = (id: PropTypes.string) =>
+    openFilm = (id) =>
     {
-        console.log('openFilm() - id: ' + id); // HACK:
+        this.props.goToFilm(id);
     }
 }
 
