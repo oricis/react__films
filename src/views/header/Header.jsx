@@ -16,12 +16,6 @@ class Header extends Component
                     <h1>The React Films proyect</h1>
                 </div>
 
-                {
-                    (this.props.pageSubtitle)
-                        ? <h3>{this.props.pageSubtitle}</h3>
-                        : ''
-                }
-
                 <ImageBar></ImageBar>
             </header>
         )
