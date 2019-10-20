@@ -1,31 +1,28 @@
 import React from 'react'
 import { Card, Icon, Image } from 'semantic-ui-react'
 
-const CardImageCard = () => (
-    <Card>
-        <Image src='/images/avatar/large/daniel.jpg' wrapped ui={false} />
+const path = 'https://image.tmdb.org/t/p/w185_and_h278_bestv2/';
+const CardImageCard = (data, cardType) => (
+
+    <Card id={data.film.id} className="custom-card">
+        <Image src={path + data.film.poster_path} wrapped ui={false} />
         <Card.Content>
-            <Card.Header>{this.props.film.title}
-                ({this.props.film.original_title})</Card.Header>
-            <Card.Meta>Estreno: {this.props.film.release_date}</Card.Meta>
+            <Card.Header>{data.film.title}</Card.Header>
+            <Card.Meta>{data.film.original_title}</Card.Meta><br />
+            <Card.Meta>Estreno: {data.film.release_date}</Card.Meta>
             <Card.Description>
-                {this.props.film.tagline}
+                {data.film.tagline}
             </Card.Description>
         </Card.Content>
-        <Card.Content extra>
-            {
-                (this.props.film.homepage)
-                    ? <Icon name='linkify' />
-                    : ''
-
-                (this.props.film.homepage)
-                    ? `<a href=${this.props.film.homepage}
-                        title=${this.props.film.original_title}
+        {
+            (cardType === 'detail' && data.film.homepage)
+                ? `<Card.Content extra><Icon name='linkify' /><a href=${data.film.homepage}
+                        title=${data.film.original_title}
                         target="_blank"
-                        follow="no-follow">Sitio web</a>`
-                    : 'Sitio web no disponible.'
-            }
-        </Card.Content>
+                        follow="no-follow">Sitio web</a></Card.Content>`
+                : ''
+        }
+
     </Card>
 )
 
