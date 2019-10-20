@@ -8,7 +8,11 @@ class FilmList extends Component
     render()
     {
         const filmCards = this.props.films.map((film, i) => {
-            return <CardImageCard film={film} key={i}></CardImageCard>
+            return <CardImageCard
+                key={i}
+                film={film}
+                onClick={(id) => { this.openFilm(id) }}
+                ></CardImageCard>
         });
 
         return (
