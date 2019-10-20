@@ -1,6 +1,6 @@
 import './film-list.scss';
 import React, { Component } from 'react';
-import CardImageCard from '../../components/SemanticUI/CardImageCard/CardImageCard';
+import FilmImageCard from '../../components/SemanticUI/FilmImageCard/FilmImageCard';
 
 class FilmList extends Component
 {
@@ -8,11 +8,11 @@ class FilmList extends Component
     render()
     {
         const filmCards = this.props.films.map((film, i) => {
-            return <CardImageCard
+            return <FilmImageCard
                 key={i}
                 film={film}
                 onClick={(id) => { this.openFilm(id) }}
-                ></CardImageCard>
+                ></FilmImageCard>
         });
 
         return (

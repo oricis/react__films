@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Card, Icon, Image } from 'semantic-ui-react'
 
 const path = 'https://image.tmdb.org/t/p/w185_and_h278_bestv2/';
-class CardImageCard extends Component
+class FilmImageCard extends Component
 {
 
     render()
@@ -30,4 +30,4 @@ class CardImageCard extends Component
     }
 }
 
-export default CardImageCard
+export default FilmImageCard
