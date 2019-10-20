@@ -39,7 +39,6 @@ class App extends Component
         const pageSubtitle = (this.state.category)
             ? this.state.category + ' Films'
             : this.pageSubtitle;
-        console.log('@@@@@@@@', this.state.films);
 
         return (
             <div className='App'>
@@ -48,6 +47,7 @@ class App extends Component
                     <HorizontalMenu
                         categories={this.categories}
                         activeIndex={this.categories[0]}
+                        onSelectedMenuItem={(category) => { this.getFilms(category); }}
                         ></HorizontalMenu>
                 </nav>
                 <FilmList films={this.state.films}></FilmList>

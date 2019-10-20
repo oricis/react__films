@@ -10,8 +10,8 @@ export default class HorizontalMenu extends Component
 
     handleItemClick = (event, { name }) =>
     {
-        console.log('handleItemClick() - ' + name);
         this.setState({ activeItem: name });
+        this.props.onSelectedMenuItem(name);
     }
 
     render()
