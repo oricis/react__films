@@ -1,0 +1,37 @@
+@import '../../assets/styles/vars.scss';
+
+/***
+ * Component styles
+ *
+ */
+
+.images-bar {
+    display: flex;
+    justify-content: flex-end;
+    width:   100%;
+
+    img {
+        max-width: 7rem;
+    }
+}
+
+.masking-box {
+    background: $title-color;
+    display: inline-block;
+    opacity: 0.8;
+
+
+
+    &.gradient-to-left {
+        -webkit-mask-image: -webkit-gradient(
+            linear, right top, left top,
+            from(rgba(0,0,0,1)), to(rgba(0,0,0,0))
+        );
+    }
+    &.gradient-to-right {
+        -webkit-mask-image: -webkit-gradient(
+            linear, left top, right top,
+            from(rgba(0,0,0,1)), to(rgba(0,0,0,0))
+        );
+    }
+}

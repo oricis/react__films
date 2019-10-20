@@ -1,6 +1,7 @@
 import './header.scss';
 import React, { Component } from 'react';
 import logo from '../../assets/images/logo.png';
+import ImageBar from '../../components/image-bar/ImageBar';
 
 class Header extends Component
 {
@@ -17,11 +18,11 @@ class Header extends Component
 
                 {
                     (this.props.pageSubtitle)
-                        ? <h3>this.props.pageSubtitle</h3>
+                        ? <h3>{this.props.pageSubtitle}</h3>
                         : ''
                 }
 
-                <div className="images-bar">TODO: FilmsBar with images here</div>
+                <ImageBar></ImageBar>
             </header>
         )
     }

@@ -21,14 +21,13 @@
     justify-content: center;
     padding:         2rem 0;
 
-    h3,
-    .images-bar {
+    h3 {
+        font-size: 1.1rem;
         width: 100%;
     }
 
     .App-title {
         display:        flex;
         flex-direction: row;
-        margin-bottom:  1rem;
     }
 }
