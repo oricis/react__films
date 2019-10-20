@@ -1,5 +1,6 @@
 import '../assets/styles/App.scss';
 import React,  { Component } from 'react';
+import FilmDetails from './film-datails/FilmDetails';
 import FilmList from './film-list/FilmList';
 import Footer from './footer/Footer';
 import Header from './header/Header';
@@ -51,7 +52,7 @@ class App extends Component
                 </nav>
                 {
                     (this.state.currentFilmId)
-                        ? 'Ver pelicula: ' + this.state.currentFilmId
+                        ? <FilmDetails film={this.state.films}></FilmDetails>
                         : <FilmList
                             films={this.state.films}
                             goToFilm={(id) => { this.getFilm(id); }}></FilmList>
@@ -69,34 +70,33 @@ class App extends Component
 
     async getFilm(filmId)
     {
-        console.log('App / getFilm() - id: ' + filmId); // HACK:
-
         if (this.state.currentFilmId !== filmId) {
-
             try {
                 const data = await AxiosApi.getMovieById(filmId);
                 this.setState({
+                    category: '',
                     currentFilmId: filmId,
                     fetched: 1,
-                    films: data.results,
+                    films: data,
                     error: '',
                 });
+
             } catch {
                 this.setState({
+                    category: '',
                     currentFilmId: filmId,
                     fetched: 1,
                     error: 'Fail fetching the movie with ID: ' + filmId,
                 });
             }
-        } /**/
+        }
     }
 
     async getFilms(category)
     {
         category = (category) ? category : this.categories[0];
 
-        if (this.state.fetched <= 2) {
-
+        if (this.state.category !== category) {
             try {
                 const data = await AxiosApi.getMoviesByCategory(category);
                 this.setState({
