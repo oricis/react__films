@@ -4,6 +4,7 @@ import FilmList from './film-list/FilmList';
 import Footer from './footer/Footer';
 import Header from './header/Header';
 import AxiosApi from '../services/AxiosApi.service.js';
+import HorizontalMenu from '../components/SemanticUI/HorizontalMenu/HorizontalMenu';
 
 class App extends Component
 {
@@ -11,7 +12,7 @@ class App extends Component
     {
         super();
 
-        this.categories = ['top_rated', 'upcoming', 'popular'];
+        this.categories = ['upcoming', 'top_rated', 'popular'];
         this.data = [];
         this.pageSubtitle = '';
 
@@ -43,6 +44,12 @@ class App extends Component
         return (
             <div className='App'>
                 <Header pageSubtitle={pageSubtitle}></Header>
+                <nav>
+                    <HorizontalMenu
+                        categories={this.categories}
+                        activeIndex={this.categories[0]}
+                        ></HorizontalMenu>
+                </nav>
                 <FilmList films={this.state.films}></FilmList>
                 <Footer></Footer>
             </div>
