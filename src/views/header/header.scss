@@ -1,0 +1,33 @@
+@import '../../assets/styles/vars.scss';
+
+/***
+ * Component styles
+ *
+ */
+
+.App-logo {
+    margin-right: 2rem;
+    height: 4rem;
+    width:  4rem;
+}
+
+.App-header {
+    align-items: center;
+    background:      $black;
+    color:           $white;
+    display:         flex;
+    height:          25vmin;
+    flex-direction:  column;
+    justify-content: center;
+    padding:         2rem 0;
+
+    h3 {
+        font-size: 1.1rem;
+        width: 100%;
+    }
+
+    .App-title {
+        display:        flex;
+        flex-direction: row;
+    }
+}

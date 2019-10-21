@@ -1,0 +1,50 @@
+@import '../../assets/styles/vars.scss';
+
+/***
+ * Component styles
+ *
+ */
+
+.App-filmlist {
+    background:   $black;
+    border:       2px solid $title-color;
+    border-width: 0 0 2px;
+
+
+    .cards {
+        display: flex;
+        flex-flow: wrap;
+        * {
+            all: unset;
+        }
+        .custom-card {
+            background: $black;
+            border: 2px solid $title-color;
+            cursor: pointer;
+            margin: 5px;
+            max-width: 185px;
+
+            * {
+                border-radius: 0 !important;
+                font-size: 1rem;
+            }
+            img {
+                max-width: 185px;
+            }
+
+            .content * {
+                color: $white;
+            }
+            .meta {
+                color: $grey;
+            }
+        }
+
+        .custom-card:hover {
+            background: $black;
+            border: 2px solid tomato;
+            box-shadow: unset;
+            transform: unset;
+        }
+    }
+}
