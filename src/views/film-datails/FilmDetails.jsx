@@ -1,5 +1,6 @@
 import './film-details.scss';
 import React, { Component } from 'react';
+import FilmImageCard from '../../components/SemanticUI/FilmImageCard/FilmImageCard';
 
 class FilmDetails extends Component
 {
@@ -10,7 +11,11 @@ class FilmDetails extends Component
         console.log('FilmDetails / render()', this.props.film);
         return (
             <div className="film-details">
-                Contenido película - {this.props.film.title}
+                <FilmImageCard
+                    cardType="detail"
+                    film={this.props.film}
+                    onClick={() => {}}
+                ></FilmImageCard>
             </div>
         );
     }

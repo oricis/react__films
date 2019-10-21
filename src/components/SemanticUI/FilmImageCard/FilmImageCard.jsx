@@ -17,16 +17,23 @@ class FilmImageCard extends Component
                     <Card.Meta>{this.props.film.original_title}</Card.Meta><br />
                     <Card.Meta>Estreno: {this.props.film.release_date}</Card.Meta>
                     <Card.Description>
-                        {this.props.film.tagline}
+                        {
+                            (this.props.cardType === 'detail'
+                                && this.props.film.overview)
+                                ? this.props.film.overview
+                                : this.props.film.tagline
+                        }
                     </Card.Description>
                 </Card.Content>
+
                     {
                         (this.props.cardType === 'detail'
                             && this.props.film.homepage)
-                            ? `<Card.Content extra><Icon name='linkify' /><a href=${this.props.film.homepage} title=${this.props.film.original_title} target="_blank" follow="no-follow">Sitio web</a></Card.Content>`
+                            ? <Card.Content extra><Icon name='linkify' />
+                                <a href={this.props.film.homepage} title={this.props.film.original_title} target="_blank" follow="no-follow">Sitio web</a></Card.Content>
                             : ''
                     }
-                </Card >
+            </Card >
         );
     }
 
