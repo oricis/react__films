@@ -6,10 +6,9 @@ import { Card, Icon } from 'semantic-ui-react'
 class FilmDetails extends Component
 {
 
-
     render()
     {
-        console.log('FilmDetails / render()', this.props.film);
+
         return (
             <div className="film-details">
                 <FilmImageCard

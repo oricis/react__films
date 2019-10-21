@@ -1,5 +1,5 @@
 import '../assets/styles/App.scss';
-import React,  { Component } from 'react';
+import React, { Component } from 'react';
 import FilmDetails from './film-datails/FilmDetails';
 import FilmList from './film-list/FilmList';
 import Footer from './footer/Footer';
@@ -14,13 +14,11 @@ class App extends Component
         super();
 
         this.categories = ['upcoming', 'top_rated', 'popular'];
-
         this.state = {
             category: '',
             currentFilmId: null,
-            fetched:  0,
-            films:    [],
-            error:    '',
+            error: '',
+            films: [],
         };
     }
 
@@ -29,10 +27,6 @@ class App extends Component
         this.getFilms(this.categories[0]);
     }
 
-    componentDidUpdate() // after render()
-    {
-        console.log('componentDidUpdate() - FILMS: ', this.state.films);
-    }
 
     render()
     {
@@ -76,7 +70,6 @@ class App extends Component
                 this.setState({
                     category: '',
                     currentFilmId: filmId,
-                    fetched: 1,
                     films: data,
                     error: '',
                 });
@@ -85,7 +78,6 @@ class App extends Component
                 this.setState({
                     category: '',
                     currentFilmId: filmId,
-                    fetched: 1,
                     error: 'Fail fetching the movie with ID: ' + filmId,
                 });
             }
@@ -102,7 +94,6 @@ class App extends Component
                 this.setState({
                     category: category,
                     currentFilmId: null,
-                    fetched: 2,
                     films: data.results,
                     error: '',
                 });
@@ -110,7 +101,6 @@ class App extends Component
                 this.setState({
                     category: category,
                     currentFilmId: null,
-                    fetched: 2,
                     error: 'Fail fetching movies',
                 });
             }

@@ -24,11 +24,6 @@ class FilmList extends Component
         );
     }
 
-    componentDidUpdate()
-    {
-        console.log('FilmList / componentDidUpdate() - Fimls: ' + this.props.films.length); // HACK:
-    }
-
 
     /**
      * Custom methods
