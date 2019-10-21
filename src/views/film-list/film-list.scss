@@ -40,8 +40,11 @@
             }
         }
 
-        .custom-card:active {
-            border-color: tomato;
+        .custom-card:hover {
+            background: $black;
+            border: 2px solid tomato;
+            box-shadow: unset;
+            transform: unset;
         }
     }
 }

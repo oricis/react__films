@@ -1,6 +1,6 @@
 import './film-list.scss';
 import React, { Component } from 'react';
-import CardImageCard from '../../components/SemanticUI/CardImageCard/CardImageCard';
+import FilmImageCard from '../../components/SemanticUI/FilmImageCard/FilmImageCard';
 
 class FilmList extends Component
 {
@@ -8,7 +8,11 @@ class FilmList extends Component
     render()
     {
         const filmCards = this.props.films.map((film, i) => {
-            return <CardImageCard film={film} key={i}></CardImageCard>
+            return <FilmImageCard
+                key={i}
+                film={film}
+                onClick={(id) => { this.openFilm(id) }}
+                ></FilmImageCard>
         });
 
         return (
@@ -20,20 +24,15 @@ class FilmList extends Component
         );
     }
 
-    componentDidUpdate()
-    {
-        console.log('FilmList / componentDidUpdate() - Fimls: ' + this.props.films.length); // HACK:
-    }
-
 
     /**
      * Custom methods
      *
      */
 
-    openFilm = (id: PropTypes.string) =>
+    openFilm = (id) =>
     {
-        console.log('openFilm() - id: ' + id); // HACK:
+        this.props.goToFilm(id);
     }
 }
 

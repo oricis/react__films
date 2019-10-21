@@ -1,0 +1,47 @@
+@import '../../assets/styles/vars.scss';
+
+/***
+ * Component styles
+ *
+ */
+
+.film-details {
+    background: $black;
+    color: $white;
+    padding: 2rem;
+
+    * {
+        border: none !important;
+        color: $white !important;
+    }
+    img {
+        margin: 0 auto;
+        max-width: 480px;
+    }
+    .custom-card {
+        -webkit-box-shadow: unset;
+        box-shadow: unset;
+        background: $black;
+        border: none;
+        color: $white;
+        margin: 0 auto;
+        width: 90%;
+
+        .rating {
+            font-size: 2rem;
+            margin-bottom: 2.5rem;
+            .active {
+                color: $title-color !important;
+            }
+        }
+    }
+    .custom-card:hover {
+        -webkit-box-shadow: unset !important;
+        box-shadow: unset !important;
+        background: $black !important;
+        border: none !important;
+        color: $white !important;
+        cursor: unset !important;
+        transform: unset !important;
+    }
+}

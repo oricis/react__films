@@ -1,5 +1,6 @@
 import '../assets/styles/App.scss';
-import React,  { Component } from 'react';
+import React, { Component } from 'react';
+import FilmDetails from './film-datails/FilmDetails';
 import FilmList from './film-list/FilmList';
 import Footer from './footer/Footer';
 import Header from './header/Header';
@@ -13,14 +14,11 @@ class App extends Component
         super();
 
         this.categories = ['upcoming', 'top_rated', 'popular'];
-        this.data = [];
-        this.pageSubtitle = '';
-
         this.state = {
             category: '',
-            fetched:  0,
-            films:    [],
-            error:    '',
+            currentFilmId: null,
+            error: '',
+            films: [],
         };
     }
 
@@ -29,10 +27,6 @@ class App extends Component
         this.getFilms(this.categories[0]);
     }
 
-    componentDidUpdate() // after render()
-    {
-        console.log('componentDidUpdate() - FILMS: ', this.state.films);
-    }
 
     render()
     {
@@ -50,7 +44,13 @@ class App extends Component
                         onSelectedMenuItem={(category) => { this.getFilms(category); }}
                         ></HorizontalMenu>
                 </nav>
-                <FilmList films={this.state.films}></FilmList>
+                {
+                    (this.state.currentFilmId)
+                        ? <FilmDetails film={this.state.films}></FilmDetails>
+                        : <FilmList
+                            films={this.state.films}
+                            goToFilm={(id) => { this.getFilm(id); }}></FilmList>
+                }
                 <Footer></Footer>
             </div>
         );
@@ -62,29 +62,49 @@ class App extends Component
      *
      */
 
+    async getFilm(filmId)
+    {
+        if (this.state.currentFilmId !== filmId) {
+            try {
+                const data = await AxiosApi.getMovieById(filmId);
+                this.setState({
+                    category: '',
+                    currentFilmId: filmId,
+                    films: data,
+                    error: '',
+                });
+
+            } catch {
+                this.setState({
+                    category: '',
+                    currentFilmId: filmId,
+                    error: 'Fail fetching the movie with ID: ' + filmId,
+                });
+            }
+        }
+    }
+
     async getFilms(category)
     {
         category = (category) ? category : this.categories[0];
 
-        // if (category !== this.state.category && !this.state.loading) {
-        if (this.state.fetched <= 2) {
-
+        if (this.state.category !== category) {
             try {
                 const data = await AxiosApi.getMoviesByCategory(category);
                 this.setState({
                     category: category,
-                    fetched: 2,
+                    currentFilmId: null,
                     films: data.results,
                     error: '',
                 });
             } catch {
                 this.setState({
                     category: category,
-                    fetched: 2,
+                    currentFilmId: null,
                     error: 'Fail fetching movies',
                 });
             }
-        } /**/
+        }
     }
 }
 
