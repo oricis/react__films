@@ -26,6 +26,14 @@
         color: $white;
         margin: 0 auto;
         width: 90%;
+
+        .rating {
+            font-size: 2rem;
+            margin-bottom: 2.5rem;
+            .active {
+                color: $title-color !important;
+            }
+        }
     }
     .custom-card:hover {
         -webkit-box-shadow: unset !important;
