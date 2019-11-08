@@ -7,7 +7,11 @@ class AxiosApi
         this.APIKEY = '64fc8874916ff3e593701b9da59b99ab';
         this.callsDone = 0;
     }
-
+    
+    /**
+     *
+     * @return promise
+     */
     async getMoviesByCategory(category, page = 1) {
         this.callsDone++;
 
@@ -17,6 +21,10 @@ class AxiosApi
         return data;
     }
 
+    /**
+     *
+     * @return promise
+     */
     async getMovieById(id) {
         const { data } = await axios.get(
             `${this.APIURI}/${id}?api_key=${this.APIKEY}&language=es-ES`,
