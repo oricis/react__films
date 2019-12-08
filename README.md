@@ -1,3 +1,33 @@
+# React - Film gallery
+## **[Go to THE "App page" to test it][1]**
+
+
+Films gallery with information, covers and more.
+
+***
+
+## How to use
+
+You can use the menu to see upcoming movies, popular movies, etc.
+![alt text](https://user-images.githubusercontent.com/7187599/70382118-aab39880-1956-11ea-91ba-e34779e361cb.png "App main page")
+
+***
+You can click over a movie card to see the movie detailed information, rated, the link to the official page, etc.
+
+![alt text](https://user-images.githubusercontent.com/7187599/70382117-aab39880-1956-11ea-9398-1ed41b632807.png "Film details page")
+
+***
+## About
+This app was developed with React 16 over the ["TheMovieDB"][2] API in 2019 by **Moisés Alcocer** as *practice into a course*.
+
+**@uthor website: https://www.ironwoods.es**
+***
+
+[1]: https://oricis.github.io/react__films/
+[2]: https://www.themoviedb.org/
+
+***
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
