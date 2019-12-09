@@ -2,22 +2,22 @@ import axios from 'axios';
 
 class AxiosApi
 {
-    constructor() {
+    constructor()
+    {
         this.APIURI = 'https://api.themoviedb.org/3/movie';
         this.APIKEY = '64fc8874916ff3e593701b9da59b99ab';
-        this.callsDone = 0;
     }
-    
+
     /**
      *
      * @return promise
      */
-    async getMoviesByCategory(category, page = 1) {
-        this.callsDone++;
-
+    async getMoviesByCategory(category, page = 1)
+    {
         const { data } = await axios.get(
             `${this.APIURI}/${category}?api_key=${this.APIKEY}&language=es-ES&page=${page}`,
         );
+
         return data;
     }
 
@@ -25,15 +25,13 @@ class AxiosApi
      *
      * @return promise
      */
-    async getMovieById(id) {
+    async getMovieById(id)
+    {
         const { data } = await axios.get(
             `${this.APIURI}/${id}?api_key=${this.APIKEY}&language=es-ES`,
         );
-        return data;
-    }
 
-    howManyCalls() {
-        return this.callsDone;
+        return data;
     }
 }
 
