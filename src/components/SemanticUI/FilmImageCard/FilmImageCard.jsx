@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Card, Image, Rating } from 'semantic-ui-react'
+import './styles.scss';
 
 const path = 'https://image.tmdb.org/t/p/w185_and_h278_bestv2/';
 class FilmImageCard extends Component
