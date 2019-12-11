@@ -9,7 +9,7 @@
     -moz-box-sizing:    border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    color:      $white;
+    color:      white;
     margin:     0;
     padding:    0;
     text-align: center;
@@ -22,6 +22,9 @@ body {
     height: 100vh;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing:  antialiased;
+}
+h1 {
+    font-size: 1.2em;
 }
 
 /***
@@ -37,7 +40,7 @@ input {
 }
 section {
     margin:  0 auto;
-    padding: 2rem;
+    padding: 2rem 0;
 }
 
 .btn {
@@ -67,4 +70,23 @@ section {
 }
 .opacity50 {
     opacity: .5;
+}
+
+
+@media (min-width:519px) {
+    h1 {
+        font-size: 2em;
+    }
+}
+
+@media (min-width:779px) {
+    body {
+        font-size: $font-size + 3px;
+    }
+}
+
+@media (min-width:2201px) {
+    body {
+        font-size: $font-size + 6px;
+    }
 }

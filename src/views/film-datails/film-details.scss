@@ -8,7 +8,7 @@
 .film-details {
     background: $black;
     color: $white;
-    padding: 2rem;
+    padding: 2rem 0;
 
     * {
         border: none !important;
@@ -16,7 +16,7 @@
     }
     img {
         margin: 0 auto;
-        max-width: 480px;
+        max-width: 240px;
     }
     .custom-card {
         -webkit-box-shadow: unset;
@@ -25,7 +25,7 @@
         border: none;
         color: $white;
         margin: 0 auto;
-        width: 90%;
+        width: 98%;
 
         .rating {
             font-size: 2rem;
@@ -43,5 +43,46 @@
         color: $white !important;
         cursor: unset !important;
         transform: unset !important;
+    }
+}
+
+@media (min-width:519px) {
+    .film-details {
+        img {
+            margin: 0 auto;
+            max-width: 280px;
+        }
+        .custom-card {
+            width: 90%;
+        }
+    }
+}
+
+@media (min-width:779px) {
+    .film-details {
+        img {
+            margin: 0 auto;
+            max-width: 320px;
+        }
+        .custom-card {
+            width: 78%;
+        }
+    }
+}
+
+@media (min-width:919px) {
+    .film-details {
+        .custom-card {
+            width: 70%;
+        }
+    }
+}
+
+@media (min-width:1279px) {
+    .film-details {
+        img {
+            margin: 0 auto;
+            max-width: 380px;
+        }
     }
 }

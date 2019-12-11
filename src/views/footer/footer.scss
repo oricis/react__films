@@ -7,8 +7,16 @@
 
 .App-footer {
     background: $black;
+    border-top: 2px solid $title-color;
     color:      $white;
+    display:    flex;
+    flex-direction: column;
     font-size:  .8rem;
-    height:     8vmin;
     padding:    .5rem 0;
+}
+
+@media (min-width:779px) {
+    .App-footer {
+        font-size:  1rem;
+    }
 }

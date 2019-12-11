@@ -11,7 +11,7 @@
     width:   100%;
 
     img {
-        max-width: 7rem;
+        max-width: 3.8rem;
     }
 }
 
@@ -33,5 +33,25 @@
             linear, left top, right top,
             from(rgba(0,0,0,1)), to(rgba(0,0,0,0))
         );
+    }
+}
+
+@media (min-width:479px) {
+    .images-bar {
+        margin-top: -2rem;
+
+        img {
+            max-width: 5rem;
+        }
+    }
+}
+
+@media (min-width:779px) {
+    .images-bar {
+        margin-top: -3rem;
+
+        img {
+            max-width: 7rem;
+        }
     }
 }
