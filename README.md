@@ -9,12 +9,13 @@ Films gallery with information, covers and more.
 ## How to use
 
 You can use the menu to see upcoming movies, popular movies, etc.
-![alt text](https://user-images.githubusercontent.com/7187599/70382118-aab39880-1956-11ea-91ba-e34779e361cb.png "App main page")
+![alt text](https://user-images.githubusercontent.com/7187599/70602334-752bdb00-1bf4-11ea-9f85-8c8bb0a2f342.png "App main page (320 pixels screens)")
 
+![alt text](https://user-images.githubusercontent.com/7187599/70602332-74934480-1bf4-11ea-8e14-d0b8ffac5a17.png "App main page")
 ***
 You can click over a movie card to see the movie detailed information, rated, the link to the official page, etc.
 
-![alt text](https://user-images.githubusercontent.com/7187599/70382117-aab39880-1956-11ea-9398-1ed41b632807.png "Film details page")
+![alt text](https://user-images.githubusercontent.com/7187599/70602336-752bdb00-1bf4-11ea-9fcb-43eac2202db8.png "Film details page (320 pixels screens)")
 
 ***
 ## About
