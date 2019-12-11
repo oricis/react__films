@@ -16,7 +16,12 @@ class FilmDetails extends Component
 
         const homepage = (filmURL)
             ? <Card.Content extra><Icon name='linkify' />
-                <a href={filmURL} title={this.props.film.original_title} target="_blank" follow="no-follow">Sitio web</a></Card.Content>
+                <a href={filmURL}
+                    title={this.props.film.original_title} target="_blank"
+                    rel="noopener noreferrer"
+                    follow="no-follow">
+                    Sitio web
+                </a></Card.Content>
             : '';
 
         return (
