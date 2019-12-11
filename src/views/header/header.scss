@@ -16,10 +16,9 @@
     background:      $black;
     color:           $white;
     display:         flex;
-    height:          25vmin;
     flex-direction:  column;
     justify-content: center;
-    padding:         2rem 0;
+    padding-top:     2rem;
 
     h3 {
         font-size: 1.1rem;
@@ -29,5 +28,6 @@
     .App-title {
         display:        flex;
         flex-direction: row;
+        width:          92%;
     }
 }
