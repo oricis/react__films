@@ -6,17 +6,15 @@
  */
 
 .App-filmlist {
-    background:   $black;
-    border:       2px solid $title-color;
-    border-width: 0 0 2px;
-
+    background: $black;
 
     .cards {
-        display: flex;
+        display:   flex;
         flex-flow: wrap;
         * {
             all: unset;
         }
+
         .custom-card {
             background: $black;
             border: 2px solid $title-color;
@@ -42,9 +40,9 @@
 
         .custom-card:hover {
             background: $black;
-            border: 2px solid tomato;
+            border:     2px solid tomato;
             box-shadow: unset;
-            transform: unset;
+            transform:  unset;
         }
     }
 }
