@@ -13,7 +13,7 @@ class Header extends Component
             <header className="App-header">
                 <div className="App-title">
                     <img src={logo} className="App-logo" alt="logo" />
-                    <h1>The React Films proyect</h1>
+                    <h1>The React Films project</h1>
                 </div>
 
                 <ImageBar></ImageBar>
