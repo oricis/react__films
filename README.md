@@ -8,10 +8,16 @@ Films gallery with information, covers and more.
 
 ## How to use
 
-You can use the menu to see upcoming movies, popular movies, etc.
-![alt text](https://user-images.githubusercontent.com/7187599/70602334-752bdb00-1bf4-11ea-9f85-8c8bb0a2f342.png "App main page (320 pixels screens)")
 
-![alt text](https://user-images.githubusercontent.com/7187599/70602332-74934480-1bf4-11ea-8e14-d0b8ffac5a17.png "App main page")
+
+
+You can use the menu to see upcoming movies, popular movies, etc.
+
+![main page](https://github.com/oricis/react__films/assets/7187599/8a1646d7-e523-479e-b180-9e50459fea03.png "App main page (320 pixels screens)")
+
+![70602332-74934480-1bf4-11ea-8e14-d0b8ffac5a17](https://github.com/oricis/react__films/assets/7187599/eb8db2fd-f136-4348-a984-5a6f78e8d69a.png "App main page")
+
+
 ***
 You can click over a movie card to see the movie detailed information, rated, the link to the official page, etc.
 
@@ -97,3 +103,4 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
