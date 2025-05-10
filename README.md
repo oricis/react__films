@@ -1,5 +1,5 @@
 # React - Film gallery
-## **[Go to THE "App page" to test it][1]**
+## **[Test the App][1]**
 
 
 Films gallery with information, covers and more.
@@ -8,7 +8,7 @@ Films gallery with information, covers and more.
 
 ## How to use
 
-
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/oricis/react__films)
 
 
 You can use the menu to see upcoming movies, popular movies, etc.
