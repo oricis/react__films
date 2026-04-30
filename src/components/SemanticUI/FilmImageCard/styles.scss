@@ -5,6 +5,18 @@
 
         .custom-card {
             //margin: 5px auto !important;
+
+            .poster-placeholder {
+                align-items: center;
+                aspect-ratio: 2 / 3;
+                background: #d8d8d8;
+                color: #444;
+                display: flex;
+                font-size: 14px;
+                justify-content: center;
+                text-align: center;
+                width: 100%;
+            }
         }
     }
 }

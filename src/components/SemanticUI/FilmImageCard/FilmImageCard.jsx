@@ -2,17 +2,23 @@ import React, { Component } from 'react'
 import { Card, Image, Rating } from 'semantic-ui-react'
 import './styles.scss';
 
-const path = 'https://image.tmdb.org/t/p/w185_and_h278_bestv2/';
+const posterBaseUrl = 'https://image.tmdb.org/t/p/w342';
+
 class FilmImageCard extends Component
 {
 
     render()
     {
+        const posterUrl = this.getPosterUrl(this.props.film.poster_path);
 
         return (
             <Card className="custom-card"
                 onClick={() => { this.openFilm(this.props.film.id); }}>
-                <Image src={path + this.props.film.poster_path} wrapped ui={false} />
+                {
+                    posterUrl
+                        ? <Image src={posterUrl} wrapped ui={false} />
+                        : <div className="poster-placeholder">Sin imagen</div>
+                }
                 <Card.Content>
                     {
                         (this.props.cardType === 'detail'
@@ -41,6 +47,14 @@ class FilmImageCard extends Component
 
     openFilm = (id) => {
         this.props.onClick(id);
+    }
+
+    getPosterUrl = (posterPath) => {
+        if (!posterPath) {
+            return null;
+        }
+
+        return `${posterBaseUrl}${posterPath}`;
     }
 }
 
