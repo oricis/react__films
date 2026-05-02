@@ -11,7 +11,7 @@ Films gallery with information, covers and more.
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/oricis/react__films)
 
 
-You can use the menu to see upcoming movies, popular movies, etc.
+Use the menu to see upcoming movies, popular movies, etc.
 
 ![main page](https://github.com/oricis/react__films/assets/7187599/8a1646d7-e523-479e-b180-9e50459fea03.png "App main page (320 pixels screens)")
 
@@ -19,13 +19,13 @@ You can use the menu to see upcoming movies, popular movies, etc.
 
 
 ***
-You can click over a movie card to see the movie detailed information, rated, the link to the official page, etc.
+Click over a movie card to see the movie detailed information, rated, the link to the official page, etc.
 
 ![alt text](https://user-images.githubusercontent.com/7187599/70602336-752bdb00-1bf4-11ea-9fcb-43eac2202db8.png "Film details page (320 pixels screens)")
 
 ***
 ## About
-This app was developed with React 16 over the ["TheMovieDB"][2] API in 2019 by **Moisés Alcocer** as *practice into a course*.
+This app was originally developed with React 16 over the ["TheMovieDB"][2] API in 2019 by **Moisés Alcocer** as *practice into a course*.
 
 **@uthor website: https://www.ironwoods.es**
 ***
@@ -64,16 +64,6 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
@@ -99,6 +89,12 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/ad
 ### Deployment
 
 See: https://create-react-app.dev/docs/deployment/
+
+### Github pages deployment
+
+Github pages use the "docs/" directory yo publish content,
+after run the build command move the "build/" content to "docs/" push and configure
+the Github repo to publish the page.
 
 ### `npm run build` fails to minify
 
